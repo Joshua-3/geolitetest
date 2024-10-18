@@ -1,3 +1,7 @@
+window.addEventListener('beforeunload', (event) => {
+    event.preventDefault();
+    event.returnValue = '';
+});
 <!DOCTYPE html>
 <html lang="en-us">
 
