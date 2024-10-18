@@ -9,9 +9,11 @@
 <body>
     <p>Close the page to trigger the onunload event.</p>
     <script type="text/javascript">
-       // Enable navigation prompt
-window.onbeforeunload = function() {
-    return true;
+window.addEventListener('beforeunload', (event) => {
+    event.preventDefault();
+    event.returnValue = '';
+});
+
     </script>
 
     <input type='text' onchange='changes=true;'> </input>
